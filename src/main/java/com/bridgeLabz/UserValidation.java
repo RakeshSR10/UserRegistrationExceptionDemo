@@ -98,6 +98,21 @@ public class UserValidation {
         else
             System.out.println("Not valid");
     }
+    private static void User_Password_Rule2() {
+        //UC7 User need to enter valid Password with at least one numeric number
+        String PASSWORD_PATTERN2 = "^([a-z~!@#$]*[0-9]){1}[0-9a-zA-Z~!@#$]*$";
+        System.out.println("Enter your Password:");
+        String password2 = scanner.next();
+
+        Pattern pattern6 = Pattern.compile(PASSWORD_PATTERN2);
+        Matcher matcher6 = pattern6.matcher(password2);
+
+        boolean result6 = matcher6.matches();
+        if(result6 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         User_FirstName();
@@ -106,5 +121,6 @@ public class UserValidation {
         User_MobileNumber();
         User_Password();
         User_Password_Rule1();
+        User_Password_Rule2();
     }
 }
