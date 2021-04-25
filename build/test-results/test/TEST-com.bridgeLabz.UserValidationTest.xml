@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgeLabz.UserValidationTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-04-25T08:44:15" hostname="RAKESH" time="0.061">
+  <properties/>
+  <testcase name="givenLastName_whenNotProper_ShouldReturnFalse()" classname="com.bridgeLabz.UserValidationTest" time="0.035"/>
+  <testcase name="givenFirstName_whenShort_ShouldReturnFalse()" classname="com.bridgeLabz.UserValidationTest" time="0.002"/>
+  <testcase name="givenMobileNumber_whenProper_ShouldReturnTrue()" classname="com.bridgeLabz.UserValidationTest" time="0.006"/>
+  <testcase name="givenFirstName_whenProper_ShouldReturnTrue()" classname="com.bridgeLabz.UserValidationTest" time="0.001"/>
+  <testcase name="givenPassword_whenNotValid_ShouldReturnFalse()" classname="com.bridgeLabz.UserValidationTest" time="0.002"/>
+  <testcase name="givenFirstName_whenWithSpChars_ShouldReturnFalse()" classname="com.bridgeLabz.UserValidationTest" time="0.002"/>
+  <testcase name="givenPassword_whenValid_ShouldReturnTrue()" classname="com.bridgeLabz.UserValidationTest" time="0.002"/>
+  <testcase name="givenLastName_whenProper_ShouldReturnTrue()" classname="com.bridgeLabz.UserValidationTest" time="0.001"/>
+  <testcase name="givenEmail_whenValid_ShouldReturnTrue()" classname="com.bridgeLabz.UserValidationTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
