@@ -113,6 +113,21 @@ public class UserValidation {
         else
             System.out.println("Not valid");
     }
+    private static void User_Password_Rule3() {
+        //UC8 User need to enter valid Password with at Exactly one Special character
+        String PASSWORD_PATTERN3 = "^([0-9a-zA-Z]*[~!@#$]){1}[0-9a-zA-Z~!@#$]*$";
+        System.out.println("Enter your Password:");
+        String password3 = scanner.next();
+
+        Pattern pattern7 = Pattern.compile(PASSWORD_PATTERN3);
+        Matcher matcher7 = pattern7.matcher(password3);
+
+        boolean result7 = matcher7.matches();
+        if(result7 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         User_FirstName();
@@ -122,5 +137,6 @@ public class UserValidation {
         User_Password();
         User_Password_Rule1();
         User_Password_Rule2();
+        User_Password_Rule3();
     }
 }
