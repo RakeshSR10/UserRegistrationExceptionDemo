@@ -52,10 +52,27 @@ public class UserValidation {
         else
             System.out.println("Not valid");
     }
+
+    private static void User_MobileNumber() {
+        //UC4 User need to enter valid Mobile Number
+        String MOBILE_NUMBER_PATTERN = "^((91[: :])+([0-9]{10}))$";
+        System.out.println("Enter your Mobile Number:");
+        String mobile_Number = scanner.next();
+
+        Pattern pattern3 = Pattern.compile(MOBILE_NUMBER_PATTERN);
+        Matcher matcher3 = pattern3.matcher(mobile_Number);
+
+        boolean result3 = matcher3.matches();
+        if(result3 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         User_FirstName();
         User_LastName();
         User_Email();
+        User_MobileNumber();
     }
 }
