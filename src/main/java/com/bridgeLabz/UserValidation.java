@@ -36,9 +36,26 @@ public class UserValidation {
         else
             System.out.println("Not valid");
     }
+
+    private static void User_Email() {
+        //UC3 User need to enter valid Email
+        String EMAIL_PATTERN = "^[a-zA-Z0-9_+&*-]+(?:\\."+"[a-zA-Z0-9]+)*@"+"(?:[a-zA-Z0-9]+\\.)+[a-zA-Z]{2,7}$";
+        System.out.println("Enter your Email:");
+        String email = scanner.next();
+
+        Pattern pattern2 = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher2 = pattern2.matcher(email);
+
+        boolean result2 = matcher2.matches();
+        if(result2 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         User_FirstName();
         User_LastName();
+        User_Email();
     }
 }
