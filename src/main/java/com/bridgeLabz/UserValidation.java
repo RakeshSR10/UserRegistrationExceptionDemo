@@ -68,11 +68,27 @@ public class UserValidation {
         else
             System.out.println("Not valid");
     }
+    private static void User_Password() {
+        //UC5 User need to enter valid Password with atleast 8 minimum character
+        String PASSWORD_PATTERN = "^[a-zA-Z0-9~!@#$]{8,}$";
+        System.out.println("Enter your Password:");
+        String password = scanner.next();
+
+        Pattern pattern4 = Pattern.compile(PASSWORD_PATTERN);
+        Matcher matcher4 = pattern4.matcher(password);
+
+        boolean result4 = matcher4.matches();
+        if(result4 == true)
+            System.out.println("Valid");
+        else
+            System.out.println("Not valid");
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         User_FirstName();
         User_LastName();
         User_Email();
         User_MobileNumber();
+        User_Password();
     }
 }
